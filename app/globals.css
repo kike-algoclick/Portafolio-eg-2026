@@ -3,6 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --main-fondo: #07080D;
+  --superficie: #0f111a;
+  --superficie-2:#151826;
+  --bordes:#232739;
+  --texto:#eef0f8;
+  --texto-secundario:#8a90a8;
+  --magenta-accent:#4dffb4;
+  --violet-accent:#885cf6;
+  --cian-accent:#388df8;
 }
 
 @theme inline {
@@ -10,6 +19,20 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-main-fondo: var(--main-fondo);
+  --color-superficie:var(--superficie);
+  --color-superficie-2:var(--superficie-2);
+  --color-bordes:var(--bordes);
+  --color-texto:var(--texto);
+  --color-texto-secundario:var(--texto-secundario);
+  --color-magenta-accent:var(--magenta-accent);
+  --color-violet-accent:var(--violet-accent);
+  --color-cian-accent:var(--cian-accent);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-display: var(--font-archivo), ui-sans-serif, sans-serif;
+  --font-serif: var(--font-instrument), Georgia, serif;
+  
 }
 
 @media (prefers-color-scheme: dark) {
