@@ -23,7 +23,7 @@ export default function Side({isActive} : IsActive){
         <div className="flex flex-col h-6/7">
           <div className="flex h-1/5 w-full justify-center items-center">
             <h5
-              className={`font-mono transition duration-300 flex text-md place-items-end h-10 ml-2 ${activeItem == "Proyectos" ? "text-magenta-accent" : "text-texto"}`}
+              className={`font-mono transition duration-300 flex text-md place-items-end h-10 ml-10 ${activeItem == "Proyectos" ? "text-magenta-accent" : "text-texto"}`}
             >
               01
             </h5>
@@ -35,15 +35,17 @@ export default function Side({isActive} : IsActive){
             </h3>
             <div className=" flex basis-3/9 justify-end ">
               <ArrowRight
+                onClick={() => setActiveItem("Proyectos")}
                 size={5}
-                className={` mr-2 rounded-full border-solid border-1 border-bordes transition duration-300 size-12 p-3 ${activeItem == "Proyectos" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
+                className={` mr-8 rounded-full border-solid border-1 border-bordes transition duration-300 size-12 p-3 ${activeItem == "Proyectos" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
               />
             </div>
           </div>
-          <hr className="" />
+          <hr className="w-6/7 mx-auto border-bordes" />
 
           <div className="flex h-1/5 w-full justify-center items-center">
-            <h5  className={`font-mono transition duration-300 flex text-md place-items-end h-10 ml-2 ${activeItem == "Stack" ? "text-magenta-accent" : "text-texto"}`}
+            <h5
+              className={`font-mono transition duration-300 flex text-md place-items-end h-10 ml-10 ${activeItem == "Stack" ? "text-magenta-accent" : "text-texto"}`}
             >
               02
             </h5>
@@ -55,14 +57,16 @@ export default function Side({isActive} : IsActive){
             </h3>
             <div className=" flex basis-3/9 justify-end ">
               <ArrowRight
+                onClick={() => setActiveItem("Stack")}
                 size={5}
-                className={` mr-2 rounded-full border-solid border-1 border-bordes size-12 transition duration-300 p-3 ${activeItem == "Stack" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
+                className={` mr-8 rounded-full border-solid border-1 border-bordes size-12 transition duration-300 p-3 ${activeItem == "Stack" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
               />
             </div>
           </div>
-          <hr />
+          <hr className="w-6/7 mx-auto border-bordes" />
           <div className="flex h-1/5 w-full justify-center items-center">
-            <h5  className={`font-mono transition duration-300 flex text-md place-items-end h-10 ml-2 ${activeItem == "Experiencia" ? "text-magenta-accent" : "text-texto"}`}
+            <h5
+              className={`font-mono transition duration-300 flex text-md place-items-end h-10 ml-10 ${activeItem == "Experiencia" ? "text-magenta-accent" : "text-texto"}`}
             >
               03
             </h5>
@@ -74,14 +78,16 @@ export default function Side({isActive} : IsActive){
             </h3>
             <div className=" flex basis-3/9 justify-end ">
               <ArrowRight
+                onClick={() => setActiveItem("Experiencia")}
                 size={5}
-                className={` mr-2 rounded-full border-solid border-1 transition duration-300 border-bordes size-12 p-3 ${activeItem == "Experiencia" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
+                className={` mr-8 rounded-full border-solid border-1 transition duration-300 border-bordes size-12 p-3 ${activeItem == "Experiencia" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
               />
             </div>
           </div>
-          <hr />
+          <hr className="w-6/7 mx-auto border-bordes" />
           <div className="flex h-1/5 w-full justify-center items-center">
-            <h5  className={`font-mono transition duration-300 flex text-md place-items-end h-10 ml-2 ${activeItem == "Contacto" ? "text-magenta-accent" : "text-texto"}`}
+            <h5
+              className={`font-mono transition duration-300 flex text-md place-items-end h-10 ml-10 ${activeItem == "Contacto" ? "text-magenta-accent" : "text-texto"}`}
             >
               04
             </h5>
@@ -93,11 +99,13 @@ export default function Side({isActive} : IsActive){
             </h3>
             <div className=" flex basis-3/9 justify-end ">
               <ArrowRight
+                onClick={() => setActiveItem("Contacto")}
                 size={5}
-                className={` mr-2 rounded-full border-solid border-1 border-bordes transition duration-300 size-12 p-3 ${activeItem == "Contacto" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
+                className={` mr-8 rounded-full border-solid border-1 border-bordes transition duration-300 size-12 p-3 ${activeItem == "Contacto" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
               />
             </div>
           </div>
+          <hr className="w-6/7 mx-auto border-bordes" />
         </div>
 
         <div className="Hablemos, links, disponible h-1/7 -mt-10"> Hola</div>
