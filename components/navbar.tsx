@@ -10,11 +10,12 @@ export const Equal = createLucideIcon("equal", [
 
 interface ActiveSideBar{
     onClick: ()=> void;
+    isActive: boolean
 }
 
-export default function NavBar({onClick}: ActiveSideBar){
+export default function NavBar({onClick, isActive}: ActiveSideBar){
 
-    const [menuActive, setMenu] = useState(false)
+   
     return (
       <div className="w-full">
         <nav className=" w-full flex flex-row h-30 items-center justify-center gap-5 ">
@@ -26,11 +27,11 @@ export default function NavBar({onClick}: ActiveSideBar){
           <div className="hidden md:block">aca van las partes</div>
 
           <div className="block md:hidden basis-1/3 flex justify-end ">
-            <div className=" flex justify-center items-center  rounded-xl w-15 h-15 p-2 bg-superficie border-bordes border-solid border-1 mr-5">
-              {!menuActive && <Equal onClick={onClick} size={50} />}
-              {menuActive && (
+            <div className=" flex justify-center items-center  rounded-xl w-12 h-12 p-1 bg-superficie border-bordes border-solid border-1 mr-5">
+              {!isActive && <Equal onClick={onClick} size={35} />}
+              {isActive && (
                 <X
-                  onClick={() => setMenu(false)}
+                  onClick={onClick}
                   size={30}
                   className="text-magenta-accent"
                 />

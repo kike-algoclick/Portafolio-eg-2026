@@ -11,7 +11,7 @@ setActive((prev) => !prev);
   }
   return (
     <div className="flex flex-col justify-center items-center border-bordes border-3 border-solid rounded-lg">
-      <NavBar onClick={onclickSide}/>
+      <NavBar onClick={onclickSide} isActive={sideActive}/>
       <Side isActive={sideActive}/>
     </div>
   );
