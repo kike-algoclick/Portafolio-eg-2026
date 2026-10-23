@@ -17,8 +17,8 @@ export default function NavBar({onClick, isActive}: ActiveSideBar){
 
    
     return (
-      <div className="w-full">
-        <nav className=" w-full flex flex-row h-30 items-center justify-center gap-5 ">
+      <div className="w-full z-30">
+        <nav className=" w-full flex flex-row h-30 items-center justify-center gap-5 border-b-1 border-texto-secundario border-solid ">
           <div className="basis-2/3 flex justify-start font-mono text-magenta-accent text-xl ml-10">
             {"<enrique.dev />"}
           </div>

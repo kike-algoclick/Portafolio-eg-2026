@@ -1,6 +1,7 @@
 'use client'
 import NavBar from "@/components/navbar";
 import Side from "@/components/sidenavbar";
+import Gradient from "@/components/backgroundGradient";
 import { useState } from "react";
 
 export default function Home() {
@@ -10,9 +11,10 @@ export default function Home() {
 setActive((prev) => !prev);
   }
   return (
-    <div className="flex flex-col justify-center items-center border-bordes border-3 border-solid rounded-lg">
-      <NavBar onClick={onclickSide} isActive={sideActive}/>
-      <Side isActive={sideActive}/>
+    <div className="flex flex-col justify-center items-center ">
+      <Gradient/>
+      <NavBar onClick={onclickSide} isActive={sideActive} />
+      <Side isActive={sideActive} />
     </div>
   );
 }
