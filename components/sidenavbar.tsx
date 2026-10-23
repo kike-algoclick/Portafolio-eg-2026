@@ -14,15 +14,15 @@ export default function Side({isActive} : IsActive){
   const [activeItem, setActiveItem] = useState("");
     return (
       <div
-        className={` fixed top-31 right-0 md:hidden z-20
-  
+        className={` fixed top-31 right-0 md:hidden
+  z-30
   h-[89.6vh]
   overflow-hidden
   transition-[width] duration-300 ease-in-out
   ${isActive ? "w-full" : "w-0"}`}
       >
-        <div className="flex flex-col h-6/7">
-          <div className="flex h-1/5 w-full justify-center items-center">
+        <div className="flex flex-col h-6/7 ">
+          <div className="flex h-1/5 w-full justify-center items-center ">
             <h5
               className={`font-mono transition duration-300 flex text-md place-items-end h-10 ml-10 ${activeItem == "Proyectos" ? "text-magenta-accent" : "text-texto-secundario"}`}
             >
@@ -119,14 +119,15 @@ export default function Side({isActive} : IsActive){
           </div>
           <div className="flex w-[85%] flex-row gap-2 justify-start ">
             <Link
-              href="https://www.youtube.com"
+              href="https://github.com/kike-algoclick"
               target="_blank"
               className="rounded-full p-2 border-bordes basis-1/7 border-1 border-solid font-mono text-texto-secundario flex items-center justify-center"
             >
               GitHub
             </Link>
             <Link
-              href=""
+              href="https://www.linkedin.com/in/enrique-barriere-garcia"
+              target="_blank"
               className="rounded-full p-2 border-bordes basis-2/7 border-1 border-solid  font-mono text-texto-secundario flex items-center justify-center"
             >
               LinkedIn
