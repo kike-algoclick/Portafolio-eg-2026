@@ -32,7 +32,7 @@ export default function Side({isActive} : IsActive){
               onClick={() => setActiveItem("Proyectos")}
               className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold  transition duration-300 flex justify-start ${activeItem == "Proyectos" ? "text-magenta-accent text-4xl" : "text-4xl"}`}
             >
-              Proyectos
+              Projects
             </h3>
             <div className=" flex basis-3/9 justify-end ">
               <ArrowRight
@@ -75,7 +75,7 @@ export default function Side({isActive} : IsActive){
               onClick={() => setActiveItem("Experiencia")}
               className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold transition duration-300   flex justify-start ${activeItem == "Experiencia" ? "text-magenta-accent text-4xl" : "text-4xl"}`}
             >
-              Experiencia
+              Experience
             </h3>
             <div className=" flex basis-3/9 justify-end ">
               <ArrowRight
@@ -96,7 +96,7 @@ export default function Side({isActive} : IsActive){
               onClick={() => setActiveItem("Contacto")}
               className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold transition duration-300   flex justify-start ${activeItem == "Contacto" ? "text-magenta-accent text-4xl" : "text-4xl"}`}
             >
-              Contacto
+              Contact
             </h3>
             <div className=" flex basis-3/9 justify-end ">
               <ArrowRight
@@ -111,7 +111,7 @@ export default function Side({isActive} : IsActive){
 
         <div className="Hablemos, links, disponible h-1/7 -mt-25 flex flex-col justify-center items-center gap-6">
           <div className="w-[85%] bg-magenta-accent h-25 items rounded-full flex items-center justify-center text-black text-xl ">
-            Hablemos
+            Let's connect
             <ArrowRight
               size={5}
               className={`transition duration-300 border-bordes size-12 p-3`}
@@ -132,14 +132,14 @@ export default function Side({isActive} : IsActive){
               LinkedIn
             </Link>
           </div>
-          <div className="w-[85%] flex font-mono text-texto-secundario items-center justify-start gap-0">
+          <div className="w-[85%] flex font-mono text-texto-secundario items-center justify-start gap-0 -mt-10">
             <div className="relative left-1">
               <Dot
                 className=" text-magenta-accent animate-pulse shrink-0 h-20"
                 size={70}
               />
             </div>
-            <div>Disponible para nuevos proyectos</div>
+            <div>Available for new projects</div>
           </div>
         </div>
       </div>
