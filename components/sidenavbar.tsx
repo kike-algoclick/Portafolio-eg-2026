@@ -15,11 +15,11 @@ export default function Side({isActive} : IsActive){
     return (
       <div
         className={` fixed top-31 right-0 md:hidden
-  z-30
+  z-40
   h-[89.6vh]
   overflow-hidden
   transition-[width] duration-300 ease-in-out
-  ${isActive ? "w-full" : "w-0"}`}
+  ${isActive ? "w-full backdrop-blur" : "w-0"}`}
       >
         <div className="flex flex-col h-6/7 ">
           <div className="flex h-1/5 w-full justify-center items-center ">

@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createLucideIcon, X } from "lucide-react";
 
 
@@ -15,9 +15,18 @@ interface ActiveSideBar{
 
 export default function NavBar({onClick, isActive}: ActiveSideBar){
 
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+const handleScroll = () => {
+  setScrolled(window.scrollY > 50)
+}; 
+window.addEventListener("scroll", handleScroll, {passive:true})
+return () => window.removeEventListener("scroll",  handleScroll)
+},[])
+
    
     return (
-      <div className="w-full z-30 fixed mt-30">
+      <div className={`w-full z-30 fixed -top-30 mt-30 transition duration-300 ${scrolled || isActive ? " backdrop-blur-md": "bg-black/80"} `}>
         <nav className=" w-full flex flex-row h-30 items-center justify-center gap-5 border-b-1 border-texto-secundario border-solid ">
           <div className="basis-2/3 flex justify-start font-mono text-magenta-accent text-xl ml-10">
             {"<enrique.dev />"}
