@@ -19,12 +19,12 @@ useEffect(()=>{
 setActive((prev) => !prev);
   }
   return (
-    <div className={`flex flex-col justify-center items-center`}>
+    <div className={`flex justify-center items-center`}>
       <Gradient />
       <NavBar onClick={onclickSide} isActive={sideActive} />
 
       <Side isActive={sideActive} />
-      <div className="pt-40">
+      <div className="pt-30 w-full">
         <Hero />
       </div>
     </div>

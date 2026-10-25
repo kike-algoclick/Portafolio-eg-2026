@@ -14,7 +14,7 @@ export default function Side({isActive} : IsActive){
   const [activeItem, setActiveItem] = useState("");
     return (
       <div
-        className={` fixed top-31 right-0 md:hidden
+        className={` fixed top-30 right-0 md:hidden
   z-40
   h-[89.6vh]
   overflow-hidden
@@ -109,7 +109,7 @@ export default function Side({isActive} : IsActive){
           <hr className="w-6/7 mx-auto border-bordes" />
         </div>
 
-        <div className="Hablemos, links, disponible h-1/7 -mt-25 flex flex-col justify-center items-center gap-6">
+        <div className="Hablemos, links, disponible h-1/7 -mt-25 flex flex-col justify-center items-center gap-6 pt-5">
           <div className="w-[85%] bg-magenta-accent h-25 items rounded-full flex items-center justify-center text-black text-xl ">
             Let's connect
             <ArrowRight
@@ -133,11 +133,11 @@ export default function Side({isActive} : IsActive){
               LinkedIn
             </Link>
           </div>
-          <div className="w-[85%] flex font-mono text-texto-secundario items-center justify-start gap-0 -mt-10">
+          <div className="w-[85%] flex font-mono text-texto-secundario items-center justify-start gap-2 ">
             <div className="relative left-1">
               <Dot
-                className=" text-magenta-accent animate-pulse shrink-0 h-20"
-                size={70}
+                className=" text-magenta-accent animate-pulse scale-300"
+                
               />
             </div>
             <div>Available for new projects</div>
