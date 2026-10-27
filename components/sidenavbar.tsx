@@ -21,7 +21,7 @@ export default function Side({isActive} : IsActive){
   transition-[width] duration-300 ease-in-out
   ${isActive ? "w-full backdrop-blur" : "w-0"}`}
       >
-        <div className="flex flex-col h-6/7 ">
+        <div className="flex flex-col h-[508px] p-[24px] ">
           <div className="flex h-1/5 w-full justify-center items-center ">
             <h5
               className={`font-mono transition duration-300 flex text-md place-items-end h-10 ml-10 ${activeItem == "Proyectos" ? "text-magenta-accent" : "text-texto-secundario"}`}
@@ -30,11 +30,11 @@ export default function Side({isActive} : IsActive){
             </h5>
             <h3
               onClick={() => setActiveItem("Proyectos")}
-              className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold  transition duration-300 flex justify-start ${activeItem == "Proyectos" ? "text-magenta-accent text-4xl" : "text-4xl"}`}
+              className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold  transition duration-300 flex justify-start ${activeItem == "Proyectos" ? "text-magenta-accent text-4xl" : "text-3xl"}`}
             >
               Projects
             </h3>
-            <div className=" flex basis-3/9 justify-end ">
+            <div className=" flex  justify-end ">
               <ArrowRight
                 onClick={() => setActiveItem("Proyectos")}
                 size={5}
@@ -52,11 +52,11 @@ export default function Side({isActive} : IsActive){
             </h5>
             <h3
               onClick={() => setActiveItem("Stack")}
-              className={`flex gap-x-2 basis-5/9 ml-4 transition duration-300 font-bold   flex justify-start ${activeItem == "Stack" ? "text-magenta-accent text-4xl" : "text-4xl"}`}
+              className={`flex gap-x-2 basis-5/9 ml-4 transition duration-300 font-bold   flex justify-start ${activeItem == "Stack" ? "text-magenta-accent text-4xl" : "text-3xl"}`}
             >
               Stack
             </h3>
-            <div className=" flex basis-3/9 justify-end ">
+            <div className=" flex  justify-end ">
               <ArrowRight
                 onClick={() => setActiveItem("Stack")}
                 size={5}
@@ -73,11 +73,11 @@ export default function Side({isActive} : IsActive){
             </h5>
             <h3
               onClick={() => setActiveItem("Experiencia")}
-              className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold transition duration-300   flex justify-start ${activeItem == "Experiencia" ? "text-magenta-accent text-4xl" : "text-4xl"}`}
+              className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold transition duration-300   flex justify-start ${activeItem == "Experiencia" ? "text-magenta-accent text-4xl" : "text-3xl"}`}
             >
               Experience
             </h3>
-            <div className=" flex basis-3/9 justify-end ">
+            <div className=" flex  justify-end ">
               <ArrowRight
                 onClick={() => setActiveItem("Experiencia")}
                 size={5}
@@ -94,11 +94,11 @@ export default function Side({isActive} : IsActive){
             </h5>
             <h3
               onClick={() => setActiveItem("Contacto")}
-              className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold transition duration-300   flex justify-start ${activeItem == "Contacto" ? "text-magenta-accent text-4xl" : "text-4xl"}`}
+              className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold transition duration-300   flex justify-start ${activeItem == "Contacto" ? "text-magenta-accent text-4xl" : "text-3xl"}`}
             >
               Contact
             </h3>
-            <div className=" flex basis-3/9 justify-end ">
+            <div className=" flex  justify-end ">
               <ArrowRight
                 onClick={() => setActiveItem("Contacto")}
                 size={5}
@@ -109,7 +109,7 @@ export default function Side({isActive} : IsActive){
           <hr className="w-6/7 mx-auto border-bordes" />
         </div>
 
-        <div className="Hablemos, links, disponible h-1/7 -mt-25 flex flex-col justify-center items-center gap-6 pt-5">
+        <div className="Hablemos, links, disponible h-1/7 -mt-10 flex flex-col justify-center items-center gap-6 pt-5">
           <div className="w-[85%] bg-magenta-accent h-25 items rounded-full flex items-center justify-center text-black text-xl ">
             Let's connect
             <ArrowRight
@@ -135,10 +135,7 @@ export default function Side({isActive} : IsActive){
           </div>
           <div className="w-[85%] flex font-mono text-texto-secundario items-center justify-start gap-2 ">
             <div className="relative left-1">
-              <Dot
-                className=" text-magenta-accent animate-pulse scale-300"
-                
-              />
+              <Dot className=" text-magenta-accent animate-pulse scale-300" />
             </div>
             <div>Available for new projects</div>
           </div>
