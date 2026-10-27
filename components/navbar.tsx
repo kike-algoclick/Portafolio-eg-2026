@@ -27,7 +27,7 @@ return () => window.removeEventListener("scroll",  handleScroll)
    
     return (
       <div className={`w-full z-30 fixed -top-30 mt-30 transition duration-300 ${scrolled || isActive ? " backdrop-blur-md": "bg-black/80"} `}>
-        <nav className=" w-full flex flex-row h-30 items-center justify-center gap-5 border-b-1 border-texto-secundario border-solid ">
+        <nav className="h-[77px] w-full flex flex-row h-30 items-center justify-between gap-5 border-b-1 border-texto-secundario border-solid ">
           <div className="basis-2/3 flex justify-start font-mono text-magenta-accent text-sm ml-10">
             {"<enrique.dev />"}
           </div>
@@ -36,8 +36,8 @@ return () => window.removeEventListener("scroll",  handleScroll)
           <div className="hidden md:block">aca van las partes</div>
 
           <div className="block md:hidden basis-1/3 flex justify-end ">
-            <div className=" flex justify-center items-center  rounded-xl w-12 h-12 p-1 bg-superficie border-bordes border-solid border-1 mr-5">
-              {!isActive && <Equal onClick={onClick} size={35} />}
+            <div className=" flex justify-center items-center  rounded-xl w-[44px] h-[44px] p-1 bg-superficie border-bordes border-solid border-1 mr-5">
+              {!isActive && <Equal onClick={onClick} size={30} />}
               {isActive && (
                 <X
                   onClick={onClick}

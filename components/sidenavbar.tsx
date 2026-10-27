@@ -14,7 +14,7 @@ export default function Side({isActive} : IsActive){
   const [activeItem, setActiveItem] = useState("");
     return (
       <div
-        className={` fixed top-30 right-0 md:hidden
+        className={` fixed top-[77px] right-0 md:hidden
   z-40
   h-[89.6vh]
   overflow-hidden
