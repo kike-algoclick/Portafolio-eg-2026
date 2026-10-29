@@ -24,7 +24,7 @@ setActive((prev) => !prev);
       <NavBar onClick={onclickSide} isActive={sideActive} />
 
       <Side isActive={sideActive} />
-      <div className="pt-30 w-full">
+      <div className="pt-20 w-full">
         <Hero />
       </div>
     </div>
