@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
 import { createLucideIcon, X } from "lucide-react";
+import Link from "next/link";
 
 
 export const Equal = createLucideIcon("equal", [
@@ -29,7 +30,9 @@ return () => window.removeEventListener("scroll",  handleScroll)
       <div className={`w-full z-30 fixed -top-30 mt-30 transition duration-300 ${scrolled || isActive ? " backdrop-blur-md": "bg-black/80"} `}>
         <nav className="h-[77px] w-full flex flex-row h-30 items-center justify-between gap-5 border-b-1 border-texto-secundario border-solid ">
           <div className="basis-2/3 flex justify-start font-mono text-magenta-accent text-sm ml-10">
+          <Link href={"#Hero"}>
             {"<enrique.dev />"}
+            </Link>
           </div>
 
           {/* Terminar el navbar para navegador cuando termines de hacer el diseño de phone*/}

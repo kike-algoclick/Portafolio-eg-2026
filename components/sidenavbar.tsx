@@ -43,8 +43,10 @@ export default function Side({isActive} : IsActive){
             </div>
           </div>
           <hr className="w-6/7 mx-auto border-bordes" />
+          
 
           <div className="flex h-1/5 w-full justify-center items-center">
+          
             <h5
               className={`font-mono transition-all duration-200 flex text-md place-items-end h-10 ml-10 ${activeItem == "Stack" ? "text-magenta-accent" : "text-texto-secundario"}`}
             >
@@ -54,16 +56,22 @@ export default function Side({isActive} : IsActive){
               onClick={() => setActiveItem("Stack")}
               className={`flex gap-x-2 basis-5/9 ml-4 transition-all duration-200 font-bold   flex justify-start ${activeItem == "Stack" ? "text-magenta-accent text-4xl" : "text-3xl"}`}
             >
+            <Link href={"#technologies"}>
               Stack
+              </Link>
             </h3>
             <div className=" flex  justify-end ">
+              <Link href={"#technologies"}>
               <ArrowRight
                 onClick={() => setActiveItem("Stack")}
                 size={5}
                 className={` mr-8 rounded-full border-solid border-1 border-bordes size-12 transition duration-200 p-3 ${activeItem == "Stack" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
               />
+              </Link>
             </div>
+            
           </div>
+    
           <hr className="w-6/7 mx-auto border-bordes" />
           <div className="flex h-1/5 w-full justify-center items-center">
             <h5
