@@ -2,6 +2,7 @@ import { Dot } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import { use, useState } from "react";
 import Image from "next/image";
+import devInfo from "../public/Code.svg"
 export default function Hero(){
 const [seeItemActive, setActiveItem] = useState("")
 
@@ -47,7 +48,7 @@ const [seeItemActive, setActiveItem] = useState("")
             </div>
           </div>
           <div className="rightside of hero w-full md:w-1/2 flex items-center justify-center">
-           <Image src="/Code.png" width={600} height={200} alt="Developer Info"/>
+           <Image src={devInfo} width={600} height={200} sizes="(max-width: 200px)"  quality={100} alt="Developer Info"/>
           </div>
         </div>
       </div>
