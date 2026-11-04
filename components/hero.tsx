@@ -28,9 +28,12 @@ const [seeItemActive, setActiveItem] = useState("")
                   problem-solving.
                 </p>
 
+
+                <div className="flex flex-col md:flex-row md:gap-2">
+
                 <button
                   onClick={() => setActiveItem("See Projects")}
-                  className={` transition duration-200 flex mt-[24px] justify-center items-center font-semibold font-sans w-[342px] h-[50px] text-nowrap  rounded-full ${seeItemActive == "See Projects" ? "bg-magenta-accent text-black font-bold" : "bg-background border-[1px] border-bordes border-solid"}`}
+                  className={` transition duration-200 flex mt-[24px] justify-center items-center font-semibold font-sans w-[342px] h-[50px] md:w-[176px]  md:h-[50px] text-nowrap  rounded-full ${seeItemActive == "See Projects" ? "bg-magenta-accent text-black font-bold" : "bg-background border-[1px] border-bordes border-solid"}`}
                 >
                   <p className="flex  items-center justify-center gap-2">
                     See projects <ArrowRight className="scale-90" />
@@ -38,17 +41,18 @@ const [seeItemActive, setActiveItem] = useState("")
                 </button>
                 <button
                   onClick={() => setActiveItem("Download cv")}
-                  className={` transition duration-200 flex mt-[24px] justify-center items-center font-semibold font-sans w-[342px] h-[50px] text-nowrap  rounded-full ${seeItemActive == "Download cv" ? "bg-magenta-accent text-black font-bold" : "bg-background border-[1px] border-bordes border-solid "}`}
+                  className={` transition duration-200 flex mt-[24px] justify-center items-center font-semibold font-sans w-[342px] md:w-[176px]  md:h-[50px] h-[50px] text-nowrap  rounded-full ${seeItemActive == "Download cv" ? "bg-magenta-accent text-black font-bold" : "bg-background border-[1px] border-bordes border-solid "}`}
                 >
                   <p className="flex  items-center justify-center gap-2">
-                    Download CV <ArrowRight className="scale-90" />
+                    Download CV
                   </p>
                 </button>
+                </div>
               </div>
             </div>
           </div>
           <div className="rightside of hero w-full md:w-1/2 flex items-center justify-center">
-           <Image src={devInfo} width={600} height={200} sizes="(max-width: 200px)"  quality={100} alt="Developer Info"/>
+           <Image src={devInfo} width={600} height={200} sizes="(max-width: 200px) 12vh, 15vh" className="relative p-0 flex items-center justify-center"  quality={100} alt="Developer Info"/>
           </div>
         </div>
       </div>
