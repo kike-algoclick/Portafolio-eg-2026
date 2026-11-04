@@ -1,6 +1,7 @@
 import { Dot } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import { use, useState } from "react";
+import Image from "next/image";
 export default function Hero(){
 const [seeItemActive, setActiveItem] = useState("")
 
@@ -46,25 +47,7 @@ const [seeItemActive, setActiveItem] = useState("")
             </div>
           </div>
           <div className="rightside of hero w-full md:w-1/2 flex items-center justify-center">
-            <div className="flex flex-col gap-0 w-full h-300 md:w-[340px] h-[330px] z-20 ">
-              <div className="h-1/8 w-full flex bg-superficie-2 items-center rounded-t-2xl">
-                <div className="flex gap-1 w-1/6 justify-center items-center">
-                  <span className="w-2 h-2 rounded-full bg-red-400 z-20"></span>
-                  <span className="w-2 h-2 rounded-full bg-yellow-400 z-20"></span>
-                  <span className="w-2 h-2 rounded-full bg-green-400 z-20"></span>
-                </div>
-                <div className="font-mono text-sm text-texto-secundario">portafilio.ts</div>
-              </div>
-
-              <div className="h-6/8 w-full flex justify-center items-center bg-superficie font-mono">
-              <span className="text-violet-accent mr-2"> const </span> developer = {"{"}<br />
-
-              <span className="text-cian-accent mr-2">nombre</span>
-              </div>
-              <hr className="border-bordes " />
-
-              <div className="h-1/8 wfull flex bg-superficie rounded-b-2xl"></div>
-            </div>
+           <Image src="/Code.png" width={600} height={200} alt="Developer Info"/>
           </div>
         </div>
       </div>
