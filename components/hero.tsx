@@ -16,7 +16,7 @@ const [seeItemActive, setActiveItem] = useState("")
         </div>
         <div className=" flex flex-col md:flex-row gap-10">
           <div className=" mt-2 flex items-center justify-center w-full md:w-1/2 flex-col  ">
-            <div className="leftside of hero w-full flex justify-center items-center md:w-[620px] md:max-w-[640px] md:h-[657px] md:max-h-[670px]">
+            <div className="leftside of hero w-full flex justify-center items-center w-1/2">
               <div className="w-full flex items-center justify-center flex-col">
                 <span className="text-4xl w-6/7 text-magenta-accent font-mono">
                   {"<enrique.dev/>"}
@@ -29,7 +29,7 @@ const [seeItemActive, setActiveItem] = useState("")
                 </p>
 
 
-                <div className="flex flex-col md:flex-row md:gap-2">
+                <div className="flex flex-col md:flex-row md:gap-2 md:w-full md:ml-20 items-center ">
 
                 <button
                   onClick={() => setActiveItem("See Projects")}
@@ -48,11 +48,19 @@ const [seeItemActive, setActiveItem] = useState("")
                   </p>
                 </button>
                 </div>
+
+                <div className="flex flex-row w-5/6 font-sans justify-start ">
+                  <div className="flex flex-col p-3">
+                    <h3 className="text-4xl">2+</h3>
+                    <p>años de experiencia</p>
+                  </div>
+            
+                </div>
               </div>
             </div>
           </div>
           <div className="rightside of hero w-full md:w-1/2 flex items-center justify-center">
-           <Image src={devInfo} width={600} height={200} sizes="(max-width: 200px) 12vh, 15vh" className="relative p-0 flex items-center justify-center"  quality={100} alt="Developer Info"/>
+           <Image src={devInfo}  className=" p-0 flex items-center justify-center"  quality={100} alt="Developer Info"/>
           </div>
         </div>
       </div>
