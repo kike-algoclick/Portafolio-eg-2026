@@ -12,11 +12,11 @@ export default function Home() {
 useEffect(()=>{
   document.body.style.overflow = sideActive ? "hidden": ""
   return() => {
-    document.body.style.overflow = "auto"
+    document.body.style.overflow = ""
   };
 
 }, [sideActive])
-  const onclickSide = () => {
+  const onclickSide = () => { 
 setActive((prev) => !prev);
   }
   return (
@@ -24,7 +24,7 @@ setActive((prev) => !prev);
       <Gradient />
       <NavBar onClick={onclickSide} isActive={sideActive} />
 
-      <Side isActive={sideActive} />
+      <Side isActive={sideActive}   onClick={onclickSide} />
       <div className="mt-20 w-full">
         <Hero />
       </div>

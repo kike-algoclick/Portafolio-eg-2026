@@ -40,14 +40,8 @@ return () => window.removeEventListener("scroll",  handleScroll)
 
           <div className="block md:hidden basis-1/3 flex justify-end ">
             <div className=" flex justify-center items-center  rounded-xl w-[44px] h-[44px] p-1 bg-superficie border-bordes border-solid border-1 mr-5">
-              {!isActive && <Equal onClick={onClick} size={30} />}
-              {isActive && (
-                <X
-                  onClick={onClick}
-                  size={30}
-                  className="text-magenta-accent"
-                />
-              )}
+              <button   onClick={onClick}   aria-label={isActive ? "Cerrar menú" : "Abrir menú"}   aria-expanded={isActive} >   {isActive ? (     <X size={30} className="text-magenta-accent" />   ) : (     <Equal size={30} />   )} </button>
+              
             </div>
           </div>
         </nav>
