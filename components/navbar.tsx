@@ -27,7 +27,7 @@ return () => window.removeEventListener("scroll",  handleScroll)
 
    
     return (
-      <div className={`w-full z-30 fixed -top-30 mt-30 transition duration-300 ${scrolled || isActive ? " backdrop-blur-md": "bg-black/80"} `}>
+      <div className={`w-full top-0 z-30 fixed top-0 transition duration-300 ${scrolled || isActive ? " backdrop-blur-md": "bg-black/80"} `}>
         <nav className="h-[77px] w-full flex flex-row h-30 items-center justify-between gap-5 border-b-1 border-texto-secundario border-solid ">
           <div className="basis-2/3 flex justify-start font-mono text-magenta-accent text-sm ml-10">
           <Link href={"#Hero"}>
