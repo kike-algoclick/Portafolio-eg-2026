@@ -18,11 +18,15 @@ useEffect(()=>{
 }, [sideActive])
   const onclickSide = () => { 
 setActive((prev) => !prev);
+
+
   }
+  const closeSide = () => {
+  setActive(false)};
   return (
     <div className={`flex justify-center items-center flex-col`}>
       <Gradient />
-      <NavBar onClick={onclickSide} isActive={sideActive} />
+      <NavBar onClick={onclickSide} isActive={sideActive} onClose={closeSide} />
 
       <Side isActive={sideActive}   onClick={onclickSide} />
       <div className="mt-20 w-full">
