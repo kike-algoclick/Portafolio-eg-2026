@@ -8,7 +8,7 @@ export default function Hero(){
 const [seeItemActive, setActiveItem] = useState("")
 
     return (
-      <div id="Hero"  className="min-h-screen relative z-20 flex flex-col gap-[16px] px-[24px] pb-[24px]">
+      <div id="Hero"  className=" relative z-20 flex flex-col gap-[16px] px-[24px] pb-[24px]">
         <div className="w-full flex justify-start p-3 ">
           <span className=" h-10 flex bg-magenta-accent/20  w-[257px] h-[33px] max-w-[306px] text-nowrap flex items-center justify-start rounded-full transparent border-1 border-solid border-magenta-accent text-magenta-accent text-xs font-mono ">
             <Dot  className=" text-magenta-accent animate-pulse scale-240 ml-2 flex" />

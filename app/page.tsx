@@ -24,7 +24,7 @@ setActive((prev) => !prev);
   const closeSide = () => {
   setActive(false)};
   return (
-    <div className={`flex justify-center items-center flex-col`}>
+    <div className={`flex justify-center items-center flex-col gap-5 `}>
       <Gradient />
       <NavBar onClick={onclickSide} isActive={sideActive} onClose={closeSide} />
 
