@@ -16,26 +16,45 @@ export default function Side({isActive, onClick} : IsActive){
     return (
       <div   className={`fixed top-[77px] right-0 md:hidden     z-40     w-full     h-[calc(100dvh-77px)]     overflow-y-auto     transition-transform duration-300 ease-in-out     ${isActive ? "translate-x-0 backdrop-blur-md" : "translate-x-full"}   `} >
         <div className="flex flex-col h-[508px] p-[24px] ">
-          <div className="flex h-1/5 w-full justify-center items-center ">
-            <h5
-              className={`font-mono transition-all duration-200 flex text-md place-items-end h-10 ml-10 ${activeItem == "Proyectos" ? "text-magenta-accent" : "text-texto-secundario"}`}
-            >
-              01
-            </h5>
-            <h3
-              onClick={() => setActiveItem("Proyectos")}
-              className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold  transition-all duration-200 flex justify-start ${activeItem == "Proyectos" ? "text-magenta-accent text-4xl" : "text-3xl"}`}
-            >
-              Projects
-            </h3>
-            <div className=" flex  justify-end ">
-              <ArrowRight
-                onClick={() => setActiveItem("Proyectos")}
-                size={5}
-                className={` mr-8 rounded-full border-solid border-1 border-bordes transition duration-300 size-12 p-3 ${activeItem == "Proyectos" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
-              />
-            </div>
-          </div>
+          <Link
+  href="#Projects"
+  onClick={() => {
+    setActiveItem("Proyectos");
+    onClick();
+  }}
+  className="flex h-1/5 w-full justify-center items-center"
+>
+  <h5
+    className={`font-mono transition-all duration-200 flex text-md place-items-end h-10 ml-10 ${
+      activeItem === "Proyectos"
+        ? "text-magenta-accent"
+        : "text-texto-secundario"
+    }`}
+  >
+    02
+  </h5>
+
+  <h3
+    className={`flex gap-x-2 basis-5/9 ml-4 font-bold transition-all duration-200 justify-start ${
+      activeItem === "Proyectos"
+        ? "text-magenta-accent text-4xl"
+        : "text-3xl"
+    }`}
+  >
+    Projects
+  </h3>
+
+  <div className="flex justify-end">
+    <ArrowRight
+      size={5}
+      className={`mr-8 rounded-full border-solid border-1 border-bordes size-12 transition duration-200 p-3 ${
+        activeItem === "Proyectos"
+          ? "text-black bg-magenta-accent"
+          : "bg-superficie text-texto"
+      }`}
+    />
+  </div>
+</Link>
           <hr className="w-6/7 mx-auto border-bordes" />
           
 

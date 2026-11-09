@@ -1,0 +1,75 @@
+import { ArrowUpRight } from "lucide-react";
+import ShowcaseSection from "./showcasesection";
+import ShowcaseCard, { type Accent } from "./showcasecard";
+
+interface Certificate {
+  title: string;
+  issuer: string;
+  year: string;
+  skills: string[];
+  accent: Accent;
+  image?: string;
+  credential: string;
+}
+
+const certificates: Certificate[] = [
+  {
+    title: "Meta Front-End Developer",
+    issuer: "Coursera",
+    year: "2025",
+    skills: ["React", "JavaScript", "UX"],
+    accent: "cian",
+    // image: "/certificates/meta-frontend.png",
+    credential: "https://example.com",
+  },
+  {
+    title: "AWS Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    year: "2025",
+    skills: ["AWS", "Cloud"],
+    accent: "violet",
+    credential: "https://example.com",
+  },
+  {
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+    year: "2024",
+    skills: ["HTML", "CSS", "Responsive"],
+    accent: "green",
+    credential: "https://example.com",
+  },
+  {
+    title: "JavaScript Algorithms",
+    issuer: "freeCodeCamp",
+    year: "2024",
+    skills: ["JavaScript", "Algoritmos"],
+    accent: "cian",
+    credential: "https://example.com",
+  },
+];
+
+export default function Certificates() {
+  return (
+    <ShowcaseSection
+      id="certificates"
+      eyebrow="Certificates"
+      title="Certificados"
+      actionLabel="LinkedIn"
+      actionHref="https://www.linkedin.com/in/enrique-barriere-garcia"
+    >
+      {certificates.map((c, i) => (
+        <ShowcaseCard
+          key={c.title}
+          index={i + 1}
+          title={c.title}
+          description={`Emitido por ${c.issuer} · ${c.year}`}
+          tags={c.skills}
+          accent={c.accent}
+          image={c.image}
+          imageFit="contain"
+          links={[{ label: "Ver credencial", href: c.credential, icon: ArrowUpRight }]}
+        />
+      ))}
+    </ShowcaseSection>
+  );
+}

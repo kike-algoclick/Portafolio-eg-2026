@@ -4,6 +4,8 @@ import Side from "@/components/sidenavbar";
 import Hero from "@/components/hero";
 import Technologies from "@/components/technologies";
 import Gradient from "@/components/backgroundGradient";
+import Projects from "@/components/projects";
+import Certificates from "@/components/certificates";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -32,7 +34,10 @@ setActive((prev) => !prev);
       <div className="mt-20 w-full">
         <Hero />
       </div>
+      
+      <Projects />
       <Technologies />
+      <Certificates />
       
     </div>
   );
