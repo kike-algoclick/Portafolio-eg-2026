@@ -10,6 +10,7 @@ interface Certificate {
   accent: Accent;
   image?: string;
   credential: string;
+  role: string;
 }
 
 const certificates: Certificate[] = [
@@ -21,6 +22,7 @@ const certificates: Certificate[] = [
     accent: "cian",
     // image: "/certificates/meta-frontend.png",
     credential: "https://example.com",
+    role:""
   },
   {
     title: "AWS Cloud Practitioner",
@@ -29,6 +31,7 @@ const certificates: Certificate[] = [
     skills: ["AWS", "Cloud"],
     accent: "violet",
     credential: "https://example.com",
+    role:""
   },
   {
     title: "Responsive Web Design",
@@ -37,6 +40,7 @@ const certificates: Certificate[] = [
     skills: ["HTML", "CSS", "Responsive"],
     accent: "green",
     credential: "https://example.com",
+    role:""
   },
   {
     title: "JavaScript Algorithms",
@@ -45,6 +49,7 @@ const certificates: Certificate[] = [
     skills: ["JavaScript", "Algoritmos"],
     accent: "cian",
     credential: "https://example.com",
+    role:""
   },
 ];
 
@@ -63,6 +68,7 @@ export default function Certificates() {
           index={i + 1}
           title={c.title}
           description={`Emitido por ${c.issuer} · ${c.year}`}
+          role={c.role}
           tags={c.skills}
           accent={c.accent}
           image={c.image}
