@@ -54,7 +54,7 @@ const [seeItemActive, setActiveItem] = useState("")
                 <div className="flex flex-row w-5/6 font-sans justify-start ">
                   <div className="flex flex-col p-3">
                     <h3 className="text-4xl">2+</h3>
-                    <p>años de experiencia</p>
+                    <p>Years of experience</p>
                   </div>
             
                 </div>

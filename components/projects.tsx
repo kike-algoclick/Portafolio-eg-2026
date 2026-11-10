@@ -21,7 +21,7 @@ const projects: Project[] = [
       "First-aid platform that provides emergency contact numbers nearby you in case of any accident or problem",
     tags: ["PowerApps", "Figma", "Microsoft Lists"],
     accent: "green",
-    // image: "/projects/saas.png",
+    image: "/projects/SecureSense.svg",
     github: "https://github.com/kike-algoclick",
     deploy: "https://example.com",
     role:"Frontend developer on PowerApps and Backend on Microsoft SharePoint "
@@ -32,6 +32,7 @@ const projects: Project[] = [
       "A web platform that focuses on helping teachers planning their classes adapting to their teaching styles and students proccesses of learning",
     tags: ["React", "Vite","PrismaORM", "SQLite","Groq"],
     accent: "violet",
+    image: "/projects/TeachMeNow.svg",
     github: "https://github.com/kike-algoclick",
     deploy: "https://teach-me-now-front-end.vercel.app",
     role:"Frontend developer on React Vite and Backend developer with prismaORM and SQLite"
@@ -41,6 +42,7 @@ const projects: Project[] = [
     description:
       "A secure real estate platform in El Salvador for buying and selling properties, featuring objective property valuations and legitimacy verification.",
     tags: ["NextJS", "Gemini", "Supabse","PostgreQSL"],
+    image: "/projects/Valtrust.svg",
     accent: "cian",
     github: "https://github.com/kike-algoclick",
     deploy: "https://valtrust-website.vercel.app/",
