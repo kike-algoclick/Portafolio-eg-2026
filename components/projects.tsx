@@ -9,6 +9,8 @@ interface Project {
   tags: string[];
   accent: Accent;
   image?: string;
+  imageFit?: "cover" | "contain";
+  imageBg?: "dark" | "light";
   github: string;
   deploy: string;
   role: string;
@@ -22,38 +24,41 @@ const projects: Project[] = [
     tags: ["PowerApps", "Figma", "Microsoft Lists"],
     accent: "green",
     image: "/projects/SecureSense.svg",
+    imageFit: "contain",
     github: "https://github.com/kike-algoclick",
     deploy: "https://example.com",
-    role:"Frontend developer on PowerApps and Backend on Microsoft SharePoint "
+    role: "Frontend developer on PowerApps and Backend on Microsoft SharePoint",
   },
   {
     title: "TeachMeNow",
     description:
-      "A web platform that focuses on helping teachers planning their classes adapting to their teaching styles and students proccesses of learning",
-    tags: ["React", "Vite","PrismaORM", "SQLite","Groq"],
+      "A web platform that focuses on helping teachers planning their classes adapting to their teaching styles and students processes of learning",
+    tags: ["React", "Vite", "PrismaORM", "SQLite", "Groq"],
     accent: "violet",
     image: "/projects/TeachMeNow.svg",
+    imageFit: "contain",
+    imageBg: "light",
     github: "https://github.com/kike-algoclick",
     deploy: "https://teach-me-now-front-end.vercel.app",
-    role:"Frontend developer on React Vite and Backend developer with prismaORM and SQLite"
+    role: "Frontend developer on React Vite and Backend developer with PrismaORM and SQLite",
   },
   {
     title: "Valtrust",
     description:
       "A secure real estate platform in El Salvador for buying and selling properties, featuring objective property valuations and legitimacy verification.",
-    tags: ["NextJS", "Gemini", "Supabse","PostgreQSL"],
-    image: "/projects/Valtrust.svg",
+    tags: ["NextJS", "Gemini", "Supabase", "PostgreSQL"],
     accent: "cian",
+    image: "/projects/Valtrust.svg",
+    imageFit: "contain",
+    imageBg: "light",
     github: "https://github.com/kike-algoclick",
     deploy: "https://valtrust-website.vercel.app/",
-    role:"Product Owner and Frontend developer in NextJS. Also Backend on Supabase and PrismaSQL"
+    role: "Product Owner and Frontend developer in NextJS. Also Backend on Supabase and Prisma",
   },
-  
 ];
 
 export default function Projects() {
   return (
-    <div id={"#Projects"}>
     <ShowcaseSection
       id="projects"
       eyebrow="01 / Projects"
@@ -75,12 +80,13 @@ export default function Projects() {
             tags={p.tags}
             accent={p.accent}
             image={p.image}
+            imageFit={p.imageFit}
+            imageBg={p.imageBg}
             links={links}
             role={p.role}
           />
         );
       })}
     </ShowcaseSection>
-    </div>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Maximize2 } from "lucide-react";
 import type { ComponentType, CSSProperties } from "react";
 
 export type Accent = "green" | "violet" | "cian";
@@ -16,9 +17,10 @@ interface ShowcaseCardProps {
   tags: string[];
   accent: Accent;
   links: CardLink[];
-  image?: string; 
+  image?: string;
   imageFit?: "cover" | "contain";
-  role:string;
+  imageBg?: "dark" | "light";
+  role?: string; // opcional: los certificados no lo usan
   onImageClick?: () => void;
 }
 
@@ -47,8 +49,11 @@ export default function ShowcaseCard({
   image,
   role,
   imageFit = "cover",
+  imageBg = "dark",
+  onImageClick,
 }: ShowcaseCardProps) {
   const a = accents[accent];
+  const Frame = onImageClick ? "button" : "div";
 
   return (
     <article
@@ -60,13 +65,24 @@ export default function ShowcaseCard({
         hover:shadow-[0_10px_40px_-12px_var(--accent)]
       "
     >
-      
+      {/* Portada */}
       <div className={`relative aspect-[16/10] overflow-hidden bg-linear-to-br ${a.cover}`}>
         <span className="absolute top-3 left-4 z-10 font-mono text-[10px] text-texto-secundario">
           {String(index).padStart(2, "0")}
         </span>
 
-        <div className="absolute inset-x-6 top-9 bottom-6 overflow-hidden rounded-lg border border-white/10 bg-main-fondo/70">
+        <Frame
+          {...(onImageClick
+            ? {
+                type: "button" as const,
+                onClick: onImageClick,
+                "aria-label": `Ampliar ${title}`,
+              }
+            : {})}
+          className={`absolute inset-x-6 top-9 bottom-6 overflow-hidden rounded-lg border border-white/10 text-left ${
+            imageBg === "light" ? "bg-white" : "bg-main-fondo/70"
+          }`}
+        >
           {image ? (
             <Image
               src={image}
@@ -74,11 +90,13 @@ export default function ShowcaseCard({
               fill
               sizes="(min-width: 768px) 45vw, 90vw"
               className={`transition-transform duration-500 group-hover:scale-105 ${
-                imageFit === "cover" ? "object-cover object-top" : "object-contain"
+                imageFit === "cover"
+                  ? "object-cover object-top"
+                  : "object-contain p-5"
               }`}
             />
           ) : (
-            
+            /* Mock mientras no hay imagen */
             <div className="p-3">
               <div className="flex gap-1.5">
                 <span className="size-1.5 rounded-full bg-[var(--accent)]" />
@@ -90,7 +108,13 @@ export default function ShowcaseCard({
               <div className="mt-4 h-10 rounded-md bg-[var(--accent)]/15" />
             </div>
           )}
-        </div>
+
+          {onImageClick && (
+            <span className="absolute right-2 bottom-2 flex size-8 items-center justify-center rounded-full bg-black/60 text-texto backdrop-blur-sm transition group-hover:bg-magenta-accent group-hover:text-black">
+              <Maximize2 className="size-4" />
+            </span>
+          )}
+        </Frame>
       </div>
 
       {/* Contenido */}
@@ -108,7 +132,12 @@ export default function ShowcaseCard({
 
         <h3 className="font-sans text-lg font-semibold text-texto md:text-xl">{title}</h3>
         <p className="text-sm leading-relaxed text-texto-secundario">{description}</p>
-        <p className="text-sm leading-relaxed p-1 bg-magenta-accent/30 rounded-lg border-magenta-accent border-1 border-solid text-magenta-accent">{role}</p>
+
+        {role && (
+          <p className="rounded-lg border border-solid border-magenta-accent bg-magenta-accent/30 p-1 text-sm leading-relaxed text-magenta-accent">
+            {role}
+          </p>
+        )}
 
         <div className="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-2">
           {links.map(({ label, href, icon: Icon }, i) => (
