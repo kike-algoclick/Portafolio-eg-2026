@@ -33,7 +33,7 @@ const projects: Project[] = [
     tags: ["React", "Vite","PrismaORM", "SQLite","Groq"],
     accent: "violet",
     github: "https://github.com/kike-algoclick",
-    deploy: "teach-me-now-front-end.vercel.app",
+    deploy: "https://teach-me-now-front-end.vercel.app",
     role:"Frontend developer on React Vite and Backend developer with prismaORM and SQLite"
   },
   {
