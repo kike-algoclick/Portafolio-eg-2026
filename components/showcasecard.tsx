@@ -19,6 +19,7 @@ interface ShowcaseCardProps {
   image?: string; 
   imageFit?: "cover" | "contain";
   role:string;
+  onImageClick?: () => void;
 }
 
 const accents: Record<Accent, { color: string; cover: string }> = {
@@ -107,7 +108,7 @@ export default function ShowcaseCard({
 
         <h3 className="font-sans text-lg font-semibold text-texto md:text-xl">{title}</h3>
         <p className="text-sm leading-relaxed text-texto-secundario">{description}</p>
-        <p className="text-sm leading-relaxed text-texto-secundario bg-magenta-accent/30 rounded-lg border-magenta-accent border-1 border-solid">{role}</p>
+        <p className="text-sm leading-relaxed p-1 bg-magenta-accent/30 rounded-lg border-magenta-accent border-1 border-solid text-magenta-accent">{role}</p>
 
         <div className="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-2">
           {links.map(({ label, href, icon: Icon }, i) => (
