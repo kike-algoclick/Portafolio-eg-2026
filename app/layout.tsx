@@ -39,7 +39,7 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: "Enrique.dev",
-  description: "Enrique's official digital portafolio",
+  description: "Enrique's official digital portfolio",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
