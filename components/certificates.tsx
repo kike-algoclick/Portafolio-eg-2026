@@ -36,7 +36,7 @@ const certificates: Certificate[] = [
     skills: ["Site Maps", "Grid",],
     accent: "cian",
     image: "/certificates/png/diploma-diseno-programadores.png",
-    pdf: "/certificates/pdf/meta-frontend.pdf",
+    pdf: "/certificates/pdf/diploma-diseno-programadores.pdf",
     credential: "https://platzi.com/p/19851373/curso/1906-course/diploma/detalle/",
     role:""
   },
