@@ -55,13 +55,13 @@ export default function Projects() {
     <ShowcaseSection
       id="projects"
       eyebrow="01 / Projects"
-      title="Proyectos destacados"
-      actionLabel="Ver todos"
+      title="Highlighted Projects"
+      actionLabel="See all"
       actionHref="https://github.com/kike-algoclick?tab=repositories"
     >
       {projects.map((p, i) => {
         const links: CardLink[] = [
-          { label: "Ver demo", href: p.deploy, icon: ArrowUpRight },
+          { label: "Use Demo", href: p.deploy, icon: ArrowUpRight },
           { label: "GitHub", href: p.github, icon: SiGithub },
         ];
         return (

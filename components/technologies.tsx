@@ -34,7 +34,7 @@ const techs: Tech[] = [
   { name: "Figma", icon: SiFigma, color: "#a259ff", category: "Tools" },
   { name: "Excel", icon: RiFileExcel2Line, color: "#5fa04e", category: "Tools" },
   { name: "Prisma ORM", icon: SiPrisma, color: "#ffffff", category: "Backend" },
-  { name: "Prisma ORM", icon: RiSupabaseFill, color: "#5fa04e", category: "Backend" },
+  { name: "Supabase", icon: RiSupabaseFill, color: "#5fa04e", category: "Backend" },
   { name: "PostgreSQL", icon: DiPostgresql, color: "#38bdf8", category: "Backend" },
 ];
 

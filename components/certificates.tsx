@@ -55,10 +55,11 @@ const certificates: Certificate[] = [
 
 export default function Certificates() {
   return (
+  <div id="certificates">
     <ShowcaseSection
       id="certificates"
       eyebrow="Certificates"
-      title="Certificados"
+      title="Certificates"
       actionLabel="LinkedIn"
       actionHref="https://www.linkedin.com/in/enrique-barriere-garcia"
     >
@@ -67,15 +68,16 @@ export default function Certificates() {
           key={c.title}
           index={i + 1}
           title={c.title}
-          description={`Emitido por ${c.issuer} · ${c.year}`}
+          description={`Issued by ${c.issuer} · ${c.year}`}
           role={c.role}
           tags={c.skills}
           accent={c.accent}
           image={c.image}
           imageFit="contain"
-          links={[{ label: "Ver credencial", href: c.credential, icon: ArrowUpRight }]}
+          links={[{ label: "See Credential", href: c.credential, icon: ArrowUpRight }]}
         />
       ))}
     </ShowcaseSection>
+    </div>
   );
 }

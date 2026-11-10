@@ -109,7 +109,7 @@ export default function Side({isActive, onClick} : IsActive){
               onClick={() => setActiveItem("Experiencia")}
               className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold transition-all duration-200   flex justify-start ${activeItem == "Experiencia" ? "text-magenta-accent text-4xl" : "text-3xl"}`}
             >
-              Experience
+              Certificates
             </h3>
             <div className=" flex  justify-end ">
               <ArrowRight
