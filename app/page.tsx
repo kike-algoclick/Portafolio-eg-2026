@@ -6,6 +6,7 @@ import Technologies from "@/components/technologies";
 import Gradient from "@/components/backgroundGradient";
 import Projects from "@/components/projects";
 import Certificates from "@/components/certificates";
+import ContactForm from "@/components/contactform";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -38,6 +39,7 @@ setActive((prev) => !prev);
       <Projects />
       <Technologies />
       <Certificates />
+    
       
     </div>
   );
