@@ -10,7 +10,7 @@ export const Equal = createLucideIcon("equal", [
 ]);
 
 const links = [
-  { label: "Projects", href: "#projects" },
+  { label: "Projects", href: "#Projects" },
   { label: "Stack", href: "#technologies" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },

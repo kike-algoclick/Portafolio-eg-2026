@@ -4,6 +4,8 @@ import {
   SiTailwindcss, SiNextdotjs, SiReact, SiTypescript, SiJavascript,
   SiHtml5, SiCss, SiNodedotjs, SiGit, SiGithub, SiVercel, SiFigma,
 } from "react-icons/si";
+import { RiFileExcel2Line } from "react-icons/ri";
+
 import type { IconType } from "react-icons";
 import TechCard from "./techcard";
 type Category = "Frontend" | "Backend" | "Tools";
@@ -28,6 +30,7 @@ const techs: Tech[] = [
   { name: "GitHub", icon: SiGithub, color: "#ffffff", category: "Tools" },
   { name: "Vercel", icon: SiVercel, color: "#ffffff", category: "Tools" },
   { name: "Figma", icon: SiFigma, color: "#a259ff", category: "Tools" },
+  { name: "Figma", icon: RiFileExcel2Line, color: "#5fa04e", category: "Tools" },
 ];
 
 const filters = ["All", "Frontend", "Backend", "Tools"] as const;
