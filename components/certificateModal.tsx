@@ -9,6 +9,7 @@ interface CertificateModalProps {
   title: string;
   image: string;
   pdf?: string;
+  portrait?: boolean;
 }
 
 export default function CertificateModal({
@@ -17,6 +18,7 @@ export default function CertificateModal({
   title,
   image,
   pdf,
+  portrait = false
 }: CertificateModalProps) {
   const ref = useRef<HTMLDialogElement>(null);
 

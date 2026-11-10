@@ -1,11 +1,13 @@
 'use client'
 import { Dot } from "lucide-react";
+import CertificateModal from "./certificateModal";
 import { ArrowRight } from "lucide-react";
 import { use, useState } from "react";
 import Image from "next/image";
 import devInfo from "../public/Code.svg"
 export default function Hero(){
 const [seeItemActive, setActiveItem] = useState("")
+const [cvOpen, setCvOpen] = useState(false);
 
     return (
       <div id="Hero"  className=" relative z-20 flex flex-col gap-[16px] px-[24px] pb-[24px]">
@@ -45,7 +47,7 @@ const [seeItemActive, setActiveItem] = useState("")
 
                 <div className="flex flex-col md:flex-row md:gap-2 md:w-full md:ml-20 items-center ">
 
-                <button
+                <button 
                   onClick={() => setActiveItem("See Projects")}
                   className={` transition duration-200 flex mt-[24px] justify-center items-center font-semibold font-sans w-[342px] h-[50px] md:w-[176px]  md:h-[50px] text-nowrap  rounded-full ${seeItemActive == "See Projects" ? "bg-magenta-accent text-black font-bold" : "bg-background border-[1px] border-bordes border-solid"}`}
                 >
@@ -53,14 +55,18 @@ const [seeItemActive, setActiveItem] = useState("")
                     See projects <ArrowRight className="scale-90" />
                   </p>
                 </button>
+
                 <button
-                  onClick={() => setActiveItem("Download cv")}
-                  className={` transition duration-200 flex mt-[24px] justify-center items-center font-semibold font-sans w-[342px] md:w-[176px]  md:h-[50px] h-[50px] text-nowrap  rounded-full ${seeItemActive == "Download cv" ? "bg-magenta-accent text-black font-bold" : "bg-background border-[1px] border-bordes border-solid "}`}
-                >
-                  <p className="flex  items-center justify-center gap-2">
-                    Download CV
-                  </p>
-                </button>
+  onClick={() => {
+    setActiveItem("View CV");
+    setCvOpen(true);
+  }}
+  className={` transition duration-200 flex mt-[24px] justify-center items-center font-semibold font-sans w-[342px] md:w-[176px] md:h-[50px] h-[50px] text-nowrap rounded-full ${seeItemActive == "View CV" ? "bg-magenta-accent text-black font-bold" : "bg-background border-[1px] border-bordes border-solid "}`}
+>
+  <p className="flex items-center justify-center gap-2">
+    View CV 
+  </p>
+</button>
                 </div>
 
                 <div className="flex flex-row w-5/6 font-sans justify-start ">
@@ -77,6 +83,17 @@ const [seeItemActive, setActiveItem] = useState("")
            <Image src={devInfo} preload={true}  className=" p-0 flex items-center justify-center"  quality={75} alt="Developer Info"/>
           </div>
         </div>
+        <CertificateModal
+  open={cvOpen}
+  onClose={() => {
+    setCvOpen(false);
+    setActiveItem(""); // el botón vuelve a su estado normal
+  }}
+  title="Curriculum Vitae"
+  image="/cv/cv.png"
+  pdf="/cv/enrique-cv.pdf"
+  portrait
+/>
       </div>
     );
 }
