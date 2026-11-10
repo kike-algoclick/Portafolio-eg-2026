@@ -31,7 +31,7 @@ export default function Side({isActive, onClick} : IsActive){
         : "text-texto-secundario"
     }`}
   >
-    02
+    01
   </h5>
 
   <h3
@@ -99,47 +99,87 @@ export default function Side({isActive, onClick} : IsActive){
 </Link>
     
           <hr className="w-6/7 mx-auto border-bordes" />
-          <div className="flex h-1/5 w-full justify-center items-center">
-            <h5
-              className={`font-mono transition-all duration-200 flex text-md place-items-end h-10 ml-10 ${activeItem == "Experiencia" ? "text-magenta-accent" : "text-texto-secundario"}`}
-            >
-              03
-            </h5>
-            <h3
-              onClick={() => setActiveItem("Experiencia")}
-              className={`flex gap-x-2 basis-5/9 ml-4 transform font-bold transition-all duration-200   flex justify-start ${activeItem == "Experiencia" ? "text-magenta-accent text-4xl" : "text-3xl"}`}
-            >
-              Certificates
-            </h3>
-            <div className=" flex  justify-end ">
-              <ArrowRight
-                onClick={() => setActiveItem("Experiencia")}
-                size={5}
-                className={` mr-8 rounded-full border-solid border-1 transition duration-200 border-bordes size-12 p-3 ${activeItem == "Experiencia" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
-              />
-            </div>
-          </div>
+           <Link
+  href="#certificates"
+  onClick={() => {
+    setActiveItem("Certificates");
+    onClick();
+  }}
+  className="flex h-1/5 w-full justify-center items-center"
+>
+  <h5
+    className={`font-mono transition-all duration-200 flex text-md place-items-end h-10 ml-10 ${
+      activeItem === "Certificates"
+        ? "text-magenta-accent"
+        : "text-texto-secundario"
+    }`}
+  >
+    03
+  </h5>
+
+  <h3
+    className={`flex gap-x-2 basis-5/9 ml-4 font-bold transition-all duration-200 justify-start ${
+      activeItem === "Certificates"
+        ? "text-magenta-accent text-4xl"
+        : "text-3xl"
+    }`}
+  >
+    Certificates
+  </h3>
+
+  <div className="flex justify-end">
+    <ArrowRight
+      size={5}
+      className={`mr-8 rounded-full border-solid border-1 border-bordes size-12 transition duration-200 p-3 ${
+        activeItem === "Certificates"
+          ? "text-black bg-magenta-accent"
+          : "bg-superficie text-texto"
+      }`}
+    />
+  </div>
+</Link>
+
           <hr className="w-6/7 mx-auto border-bordes" />
-          <div className="flex h-1/5 w-full justify-center items-center">
-            <h5
-              className={`font-mono transition-all duration-200 flex text-md place-items-end h-10 ml-10 ${activeItem == "Contacto" ? "text-magenta-accent" : "text-texto-secundario"}`}
-            >
-              04
-            </h5>
-            <h3
-              onClick={() => setActiveItem("Contacto")}
-              className={`flex gap-x-2 basis-5/9 ml-4 font-bold transition-all duration-200   flex justify-start ${activeItem == "Contacto" ? "text-magenta-accent text-4xl" : "text-3xl"}`}
-            >
-              Contact
-            </h3>
-            <div className=" flex  justify-end ">
-              <ArrowRight
-                onClick={() => setActiveItem("Contacto")}
-                size={5}
-                className={` mr-8 rounded-full border-solid border-1 border-bordes transition duration-200 size-12 p-3 ${activeItem == "Contacto" ? "text-black bg-magenta-accent" : "bg-superficie text-texto"}`}
-              />
-            </div>
-          </div>
+
+           <Link
+  href="#contact"
+  onClick={() => {
+    setActiveItem("contact");
+    onClick();
+  }}
+  className="flex h-1/5 w-full justify-center items-center"
+>
+  <h5
+    className={`font-mono transition-all duration-200 flex text-md place-items-end h-10 ml-10 ${
+      activeItem === "contact"
+        ? "text-magenta-accent"
+        : "text-texto-secundario"
+    }`}
+  >
+    02
+  </h5>
+
+  <h3
+    className={`flex gap-x-2 basis-5/9 ml-4 font-bold transition-all duration-200 justify-start ${
+      activeItem === "contact"
+        ? "text-magenta-accent text-4xl"
+        : "text-3xl"
+    }`}
+  >
+    Contact
+  </h3>
+
+  <div className="flex justify-end">
+    <ArrowRight
+      size={5}
+      className={`mr-8 rounded-full border-solid border-1 border-bordes size-12 transition duration-200 p-3 ${
+        activeItem === "contact"
+          ? "text-black bg-magenta-accent"
+          : "bg-superficie text-texto"
+      }`}
+    />
+  </div>
+</Link>
           <hr className="w-6/7 mx-auto border-bordes" />
         </div>
 
