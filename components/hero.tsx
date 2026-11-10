@@ -18,6 +18,18 @@ const [seeItemActive, setActiveItem] = useState("")
         </div>
         <div className=" flex flex-col md:flex-row gap-10">
           <div className=" mt-2 flex items-center justify-center w-full md:w-1/2 flex-col  ">
+          <div className="w-6/7 mb-4">
+  <div className="relative size-28 md:size-36 rounded-full border-2 border-magenta-accent p-1 shadow-[0_0_40px_-10px_var(--magenta-accent)]">
+    <Image
+      src="/profile.jpg"
+      alt="Enrique Barriere"
+      width={288}
+      height={288}
+      preload
+      className="size-full rounded-full object-cover object-top"
+    />
+  </div>
+</div>
             <div className="leftside of hero w-full flex justify-center items-center w-1/2">
               <div className="w-full flex items-center justify-center flex-col">
                 <span className="text-4xl w-6/7 text-magenta-accent font-mono">

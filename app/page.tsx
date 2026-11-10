@@ -40,7 +40,7 @@ setActive((prev) => !prev);
       <Projects />
       <Technologies />
       <Certificates />
-    
+    <ContactForm />
       <Footer />
     </div>
   );
