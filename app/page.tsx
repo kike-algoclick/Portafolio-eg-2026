@@ -6,6 +6,7 @@ import Technologies from "@/components/technologies";
 import Gradient from "@/components/backgroundGradient";
 import Projects from "@/components/projects";
 import Certificates from "@/components/certificates";
+import Footer from "@/components/footer";
 import ContactForm from "@/components/contactform";
 import { useState, useEffect } from "react";
 
@@ -40,7 +41,7 @@ setActive((prev) => !prev);
       <Technologies />
       <Certificates />
     
-      
+      <Footer />
     </div>
   );
 }
