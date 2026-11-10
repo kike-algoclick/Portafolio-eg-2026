@@ -2,9 +2,11 @@
 import { useState } from "react";
 import {
   SiTailwindcss, SiNextdotjs, SiReact, SiTypescript, SiJavascript,
-  SiHtml5, SiCss, SiNodedotjs, SiGit, SiGithub, SiVercel, SiFigma,
+  SiHtml5, SiCss, SiNodedotjs, SiGit, SiGithub, SiVercel, SiFigma, SiPrisma
 } from "react-icons/si";
-import { RiFileExcel2Line } from "react-icons/ri";
+import { RiFileExcel2Line, RiSupabaseFill } from "react-icons/ri";
+
+import {DiPostgresql} from "react-icons/di"
 
 import type { IconType } from "react-icons";
 import TechCard from "./techcard";
@@ -30,7 +32,10 @@ const techs: Tech[] = [
   { name: "GitHub", icon: SiGithub, color: "#ffffff", category: "Tools" },
   { name: "Vercel", icon: SiVercel, color: "#ffffff", category: "Tools" },
   { name: "Figma", icon: SiFigma, color: "#a259ff", category: "Tools" },
-  { name: "Figma", icon: RiFileExcel2Line, color: "#5fa04e", category: "Tools" },
+  { name: "Excel", icon: RiFileExcel2Line, color: "#5fa04e", category: "Tools" },
+  { name: "Prisma ORM", icon: SiPrisma, color: "#ffffff", category: "Backend" },
+  { name: "Prisma ORM", icon: RiSupabaseFill, color: "#5fa04e", category: "Backend" },
+  { name: "PostgreSQL", icon: DiPostgresql, color: "#38bdf8", category: "Backend" },
 ];
 
 const filters = ["All", "Frontend", "Backend", "Tools"] as const;

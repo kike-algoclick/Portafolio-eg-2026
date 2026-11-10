@@ -11,46 +11,42 @@ interface Project {
   image?: string;
   github: string;
   deploy: string;
+  role: string;
 }
 
 const projects: Project[] = [
   {
     title: "SecureSense",
     description:
-      "Plataforma de primeros auxilios que provee números de emergencia cercanos en caso de accidentes",
+      "First-aid platform that provides emergency contact numbers nearby you in case of any accident or problem",
     tags: ["PowerApps", "Figma", "Microsoft Lists"],
     accent: "green",
     // image: "/projects/saas.png",
     github: "https://github.com/kike-algoclick",
     deploy: "https://example.com",
+    role:"Frontend developer on PowerApps and Backend on Microsoft SharePoint "
   },
   {
-    title: "App móvil de finanzas",
+    title: "TeachMeNow",
     description:
-      "Control de gastos con sincronización offline y gráficos interactivos.",
-    tags: ["React Native", "Firebase"],
+      "A web platform that focuses on helping teachers planning their classes adapting to their teaching styles and students proccesses of learning",
+    tags: ["React", "Vite","PrismaORM", "SQLite","Groq"],
     accent: "violet",
     github: "https://github.com/kike-algoclick",
-    deploy: "https://example.com",
+    deploy: "teach-me-now-front-end.vercel.app",
+    role:"Frontend developer on React Vite and Backend developer with prismaORM and SQLite"
   },
   {
-    title: "API de pagos escalable",
+    title: "Valtrust",
     description:
-      "Microservicios con colas y alta disponibilidad para e-commerce.",
-    tags: ["Go", "Docker", "AWS"],
+      "A secure real estate platform in El Salvador for buying and selling properties, featuring objective property valuations and legitimacy verification.",
+    tags: ["NextJS", "Gemini", "Supabse","PostgreQSL"],
     accent: "cian",
     github: "https://github.com/kike-algoclick",
-    deploy: "https://example.com",
+    deploy: "https://valtrust-website.vercel.app/",
+    role:"Product Owner and Frontend developer in NextJS. Also Backend on Supabase and PrismaSQL"
   },
-  {
-    title: "Herramienta open source para devs",
-    description:
-      "CLI con más de 2k estrellas en GitHub, usada por equipos en 15 países.",
-    tags: ["TypeScript", "CLI", "OSS"],
-    accent: "green",
-    github: "https://github.com/kike-algoclick",
-    deploy: "https://example.com",
-  },
+  
 ];
 
 export default function Projects() {
@@ -78,6 +74,7 @@ export default function Projects() {
             accent={p.accent}
             image={p.image}
             links={links}
+            role={p.role}
           />
         );
       })}

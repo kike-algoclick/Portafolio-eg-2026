@@ -16,8 +16,9 @@ interface ShowcaseCardProps {
   tags: string[];
   accent: Accent;
   links: CardLink[];
-  image?: string; // ruta en /public, ej: "/projects/saas.png"
+  image?: string; 
   imageFit?: "cover" | "contain";
+  role:string;
 }
 
 const accents: Record<Accent, { color: string; cover: string }> = {
@@ -43,6 +44,7 @@ export default function ShowcaseCard({
   accent,
   links,
   image,
+  role,
   imageFit = "cover",
 }: ShowcaseCardProps) {
   const a = accents[accent];
@@ -57,7 +59,7 @@ export default function ShowcaseCard({
         hover:shadow-[0_10px_40px_-12px_var(--accent)]
       "
     >
-      {/* Portada */}
+      
       <div className={`relative aspect-[16/10] overflow-hidden bg-linear-to-br ${a.cover}`}>
         <span className="absolute top-3 left-4 z-10 font-mono text-[10px] text-texto-secundario">
           {String(index).padStart(2, "0")}
@@ -75,7 +77,7 @@ export default function ShowcaseCard({
               }`}
             />
           ) : (
-            /* Mock mientras no hay imagen */
+            
             <div className="p-3">
               <div className="flex gap-1.5">
                 <span className="size-1.5 rounded-full bg-[var(--accent)]" />
@@ -105,6 +107,7 @@ export default function ShowcaseCard({
 
         <h3 className="font-sans text-lg font-semibold text-texto md:text-xl">{title}</h3>
         <p className="text-sm leading-relaxed text-texto-secundario">{description}</p>
+        <p className="text-sm leading-relaxed text-texto-secundario">{role}</p>
 
         <div className="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-2">
           {links.map(({ label, href, icon: Icon }, i) => (
